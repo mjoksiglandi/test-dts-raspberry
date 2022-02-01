@@ -4,9 +4,7 @@
   videocore {
 
     pins_cm {
-
       pin_config {
-
         pin@default {
           polarity = "active_high";
           termination = "pull_down";
@@ -31,11 +29,11 @@
         pin@p13 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
 ///////////////////////////////////////////
 // TO ENABLE UART0 UNCOMMENT THESE 2 LINES:
-//       pin@p14 { function = "uart0";   termination = "no_pulling"; }; // UART0 TX
-//       pin@p15 { function = "uart0";   termination = "pull_up";    }; // UART0 RX
+        pin@p14 { function = "uart0";   termination = "no_pulling"; }; // UART0 TX
+        pin@p15 { function = "uart0";   termination = "pull_up";    }; // UART0 RX
 // AND COMMENT OUT/REMOVE THESE 2 LINES:
-        pin@p14 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
-        pin@p15 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
+  //      pin@p14 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
+    //    pin@p15 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
 ///////////////////////////////////////////
         pin@p16 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
         pin@p17 { function = "input";   termination = "pull_down";  }; // DEFAULT STATE
@@ -116,13 +114,10 @@
           number = <1>;
         };
       }; // pin_defines
-
     }; // pins_cm
 
     pins_cm3 {
-
       pin_config {
-
         pin@default {
            polarity = "active_high";
            termination = "pull_down";
@@ -155,10 +150,6 @@
         };
         pin_define@EMMC_ENABLE {
            type = "external";
-           number = <1>;
-        };
-        pin_define@NUM_CAMERAS {
-           type = "internal";
            number = <1>;
         };
         pin_define@POWER_LOW {
@@ -238,9 +229,6 @@
           number = <3>;
         };
       }; // pin_defines
-
     }; // pins_cm3
-
   };
-
 };
